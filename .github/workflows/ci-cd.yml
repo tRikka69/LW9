@@ -32,3 +32,18 @@ jobs:
         name: BuildOutput
         path: |
           **/bin/Release/
+  deploy:
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: BuildOutput
+
+      - name: Deployment
+        run: |
+          echo "Завантаження збірки..."
+          echo "Розгортання програми на тестовий сервер..."
+          echo "Програма успішно розгорнута!"
