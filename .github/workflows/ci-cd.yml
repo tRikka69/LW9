@@ -21,10 +21,10 @@ jobs:
       uses: NuGet/setup-nuget@v1
 
     - name: Restore NuGet packages
-      run: nuget restore Завдання 1.sln
+      run: nuget restore Завдання_1.sln
 
     - name: Build with MSBuild
-      run: msbuild Завдання 1.sln /p:Configuration=Release
+      run: msbuild Завдання_1.sln /p:Configuration=Release
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
