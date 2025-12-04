@@ -1,0 +1,6 @@
+@AmateurTheaterMongo_HostAddress = http://localhost:5062
+
+GET {{AmateurTheaterMongo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
